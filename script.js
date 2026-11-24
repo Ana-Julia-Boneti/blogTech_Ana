@@ -9,16 +9,24 @@ botoesCurtir.forEach((botao) => {
         if (botao.classList.contains('curtido')) {
             botao.classList.remove('curtido');
             contador.textContent = quantidade - 1;
-            // Volta para o coração vazado
+            
+            // Volta para o ícone vazado original
             if (icone.classList.contains('fa-heart')) {
+                icone.classList.remove('fa-solid');
+                icone.classList.add('fa-regular');
+            } else if (icone.classList.contains('fa-thumbs-down')) {
                 icone.classList.remove('fa-solid');
                 icone.classList.add('fa-regular');
             }
         } else {
             botao.classList.add('curtido');
             contador.textContent = quantidade + 1;
-            // Transforma em coração preenchido
+            
+            // Transforma o ícone em preenchido ao clicar
             if (icone.classList.contains('fa-heart')) {
+                icone.classList.remove('fa-regular');
+                icone.classList.add('fa-solid');
+            } else if (icone.classList.contains('fa-thumbs-down')) {
                 icone.classList.remove('fa-regular');
                 icone.classList.add('fa-solid');
             }
