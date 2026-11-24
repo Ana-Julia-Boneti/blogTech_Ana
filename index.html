@@ -5,68 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fábrica de Memes 😂</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Ícones do FontAwesome para deixar os botões com cara de app real -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Fábrica de Memes 😂</h1>
-        <p>Os melhores e mais engraçados memes da internet</p>
+    <!-- Cabeçalho Fixo Estilo Rede Social -->
+    <header class="app-header">
+        <div class="header-content">
+            <h1 class="logo">Fábrica de Memes <i class="fa-solid fa-face-laugh-squint"></i></h1>
+            <div class="header-icons">
+                <i class="fa-regular fa-square-plus" title="Criar post"></i>
+                <i class="fa-regular fa-compass" title="Explorar"></i>
+                <i class="fa-regular fa-heart" title="Notificações"></i>
+            </div>
+        </div>
     </header>
 
+    <!-- Barra de Stories (Estilo Instagram) -->
+    <div class="stories-container">
+        <div class="story">
+            <div class="story-ring"><div class="story-avatar">RM</div></div>
+            <span>Seu Story</span>
+        </div>
+        <div class="story">
+            <div class="story-ring"><div class="story-avatar">🐸</div></div>
+            <span>Doge</span>
+        </div>
+        <div class="story">
+            <div class="story-ring"><div class="story-avatar">🐱</div></div>
+            <span>GatoConfuso</span>
+        </div>
+        <div class="story">
+            <div class="story-ring"><div class="story-avatar">📚</div></div>
+            <span>Ventilador</span>
+        </div>
+    </div>
+
+    <!-- Feed de Posts -->
     <main>
+        <!-- Post 1 -->
         <article class="post">
             <div class="post-header">
-                <div class="avatar">RM</div>
-                <p class="artigo-autor">rei_dos_memes</p>
+                <div class="post-user-info">
+                    <div class="avatar">RM</div>
+                    <span class="artigo-autor">rei_dos_memes</span>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
             </div>
 
-            <img src="cc.jpg"
-                 alt="Meme clássico do cachorro Doge olhando de lado com expressão desconfiada e engraçada.">
+            <img src="aaa.jpg" alt="Meme do Doge desconfiado">
 
             <div class="post-body">
                 <div class="post-actions">
-                    <button class="btn-like">❤️ <span>0</span></button>
-                    <button class="btn-like">👍 <span>0</span></button>
+                    <button class="btn-like">
+                        <i class="fa-regular fa-heart"></i> <span>0</span>
+                    </button>
+                    <button class="btn-like">
+                        <i class="fa-regular fa-thumbs-up"></i> <span>0</span>
+                    </button>
+                    <div class="action-right">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
                 </div>
                 <h2>Quando o código funciona de primeira</h2>
                 <p><strong>rei_dos_memes</strong> Aquela sensação de desconfiança quando você aperta "Run" e não aparece nenhum erro vermelho na tela. Será que é mágica?</p>
             </div>
         </article>
 
+        <!-- Post 2 -->
         <article class="post">
             <div class="post-header">
-                <div class="avatar">RM</div>
-                <p class="artigo-autor">rei_dos_memes</p>
+                <div class="post-user-info">
+                    <div class="avatar">RM</div>
+                    <span class="artigo-autor">rei_dos_memes</span>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
             </div>
 
-            <img src="jj.jpg"
-                 alt="Meme do gato confuso na mesa de jantar apontando para uma salada.">
+            <img src="bb.jpg" alt="Meme do gato confuso">
 
             <div class="post-body">
                 <div class="post-actions">
-                    <button class="btn-like">❤️ <span>0</span></button>
-                    <button class="btn-like">👍 <span>0</span></button>
+                    <button class="btn-like">
+                        <i class="fa-regular fa-heart"></i> <span>0</span>
+                    </button>
+                    <button class="btn-like">
+                        <i class="fa-regular fa-thumbs-up"></i> <span>0</span>
+                    </button>
+                    <div class="action-right">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
                 </div>
                 <h2>Segunda-feira às 7 da manhã</h2>
                 <p><strong>rei_dos_memes</strong> Eu tentando explicar para o meu cérebro que o final de semana acabou e que já está na hora de levantar da cama.</p>
             </div>
         </article>
 
+        <!-- Post 3 (O meme do ventilador que você mandou) -->
         <article class="post">
             <div class="post-header">
-                <div class="avatar">RM</div>
-                <p class="artigo-autor">rei_dos_memes</p>
+                <div class="post-user-info">
+                    <div class="avatar">RM</div>
+                    <span class="artigo-autor">rei_dos_memes</span>
+                </div>
+                <i class="fa-solid fa-ellipsis"></i>
             </div>
 
-            <img src="ll.jpg"
-                 alt="Meme do gato confuso na mesa de jantar apontando para uma salada.">
+            <img src="ll.jpg" alt="Meme do ventilador na aula">[cite: 3]
 
             <div class="post-body">
                 <div class="post-actions">
-                    <button class="btn-like">❤️ <span>0</span></button>
-                    <button class="btn-like">👍 <span>0</span></button>
+                    <button class="btn-like">
+                        <i class="fa-regular fa-heart"></i> <span>0</span>
+                    </button>
+                    <button class="btn-like">
+                        <i class="fa-regular fa-thumbs-up"></i> <span>0</span>
+                    </button>
+                    <div class="action-right">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
                 </div>
-                <h2>Terceiro post da página</h2>
-                <p><strong>rei_dos_memes</strong> Entendi foi nada, mas sigo firme admirando a decoração da sala.</p>
+                <h2>Foco na aula... só que não</h2>
+                <p><strong>rei_dos_memes</strong> Professora: vocês entenderam? Eu olhando o ventilador rodando: 🌀[cite: 3]</p>
             </div>
         </article>
     </main>

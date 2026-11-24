@@ -1,3 +1,4 @@
+/* Configurações Globais */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,40 +9,106 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #fafafa;
     color: #262626;
+    padding-bottom: 40px;
 }
 
-/* Barra superior fixa estilo Instagram */
-header {
+/* --- CABEÇALHO FIXO --- */
+.app-header {
     background-color: #ffffff;
     border-bottom: 1px solid #dbdbdb;
-    text-align: center;
-    padding: 14px 16px;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
+    padding: 10px 16px;
 }
 
-header h1 {
-    font-size: 1.4rem;
+.header-content {
+    max-width: 470px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #183C63;
+    font-family: cursive, sans-serif;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.3rem;
+    color: #262626;
+    cursor: pointer;
+}
+
+/* --- BARRA DE STORIES --- */
+.stories-container {
+    max-width: 470px;
+    margin: 16px auto;
+    background: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.story-ring {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.story-avatar {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
     color: #183C63;
 }
 
-header p {
-    font-size: 0.85rem;
-    color: #8e8e8e;
+.story span {
+    font-size: 0.75rem;
+    color: #262626;
+    max-width: 64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-/* Feed centralizado (largura padrão de feed do Insta) */
+/* --- FEED / POSTS --- */
 main {
     max-width: 470px;
-    margin: 24px auto;
-    padding: 0 12px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
+    padding: 0 4px;
 }
 
-/* Card de cada publicação */
 .post {
     background-color: #ffffff;
     border: 1px solid #dbdbdb;
@@ -49,22 +116,28 @@ main {
     overflow: hidden;
 }
 
-/* Topo do post (Avatar + Nome) */
+/* Topo do Post (Avatar e nome do criador) */
 .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.post-user-info {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 14px;
 }
 
 .avatar {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background: #183C63;
     color: #ffffff;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,69 +145,78 @@ main {
 
 .artigo-autor {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #262626;
 }
 
-/* Imagem do post sem cortes */
+.post-header .fa-ellipsis {
+    color: #8e8e8e;
+    cursor: pointer;
+}
+
+/* Imagem sem corte */
 .post img {
     width: 100%;
     max-height: 500px;
-    object-fit: contain; /* Garante que a imagem inteira apareça sem ser cortada */
-    background-color: #000; /* Fundo opcional para imagens que tenham proporções diferentes */
+    object-fit: contain;
+    background-color: #000000;
     display: block;
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
 }
 
-/* Área de botões e legenda */
+/* Ações e Legendas */
 .post-body {
-    padding: 12px 14px 16px 14px;
+    padding: 10px 14px 14px 14px;
 }
 
 .post-actions {
     display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
 }
 
-/* Botões de curtir */
-.btn-like {
-    background-color: #f4f4f4;
-    border: 1px solid #dbdbdb;
-    border-radius: 20px;
-    padding: 6px 14px;
-    font-size: 0.95rem;
+.action-right {
     cursor: pointer;
-    display: flex;
+}
+
+/* Botões de Curtida Estilizados */
+.btn-like {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: transform 0.15s ease, background-color 0.2s ease;
+    color: #262626;
+    padding: 4px 8px;
+    border-radius: 16px;
+    transition: background 0.2s;
 }
 
 .btn-like:hover {
-    background-color: #eaeaea;
+    background-color: #f2f2f2;
 }
 
-.btn-like:active {
-    transform: scale(1.15);
-}
-
-/* Estilo quando o botão já foi curtido */
+/* Estado Curtido (Coração Vermelho) */
 .btn-like.curtido {
-    background-color: #ffe6ea;
-    border-color: #ff4d6d;
-    color: #d90429;
-    font-weight: bold;
+    color: #ed4956;
+}
+
+.btn-like.curtido i {
+    font-weight: 900; /* Deixa o ícone preenchido */
 }
 
 .post-body h2 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 4px;
     color: #183C63;
 }
 
 .post-body p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     line-height: 1.4;
 }
