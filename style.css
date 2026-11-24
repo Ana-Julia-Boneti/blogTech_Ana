@@ -76,11 +76,12 @@ main {
     color: #262626;
 }
 
-/* Imagem em largura total */
+/* Imagem do post sem cortes */
 .post img {
     width: 100%;
-    max-height: 470px;
-    object-fit: cover;
+    max-height: 500px;
+    object-fit: contain; /* Garante que a imagem inteira apareça sem ser cortada */
+    background-color: #000; /* Fundo opcional para imagens que tenham proporções diferentes */
     display: block;
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
